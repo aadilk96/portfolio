@@ -1,0 +1,97 @@
+.home {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(45deg, #02001F, #000000);
+
+    &-name {
+        transform: translateY(50px);
+        &-last {
+            color: #fff;
+        }
+    }
+
+    &-menu {
+        // transform: translateY(100px);
+        &-list {
+            font-size: $font-size;
+            line-height: 1.2;
+            text-transform: uppercase;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: rotateX(-10deg) rotateY(20deg);
+
+            &-item {
+                position: relative;
+                color: transparent;
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: $split-position;
+                    left: -10%;
+                    right: -10%;
+                    height: $split-thickness;
+                    border-radius: $split-thickness;
+                    margin-top: -($split-thickness / 2);
+                    background: $split-color;
+                    transform: scale(0);
+                    transition: transform .8s cubic-bezier(.16, 1.08, .38, .98);
+                    z-index: 1;
+                }
+
+                &:hover,
+                &:active {
+                    .Mask {
+                        color: #FFF;
+                        transform: skewX(12deg) translateX(5px);
+                    }
+
+                    .Mask+.Mask {
+                        transform: skewX(12deg) translateX(-5px);
+                    }
+
+                    &::before {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    // img {
+    //     height: 70%;
+    // }
+    h1 {
+        color: #fff;
+        font-size: 50px;
+        margin: 30px 0px;
+    }
+
+    p {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: $font-size;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        color: $split-color;
+        flex-direction: column;
+        align-items: center;
+        transform: rotateX(-15deg) rotateY(19deg);
+    }
+}

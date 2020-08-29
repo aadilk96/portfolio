@@ -1,0 +1,29 @@
+$perspective: 60rem;
+$font-size: 4.25rem;
+$split-position: 49%;
+$split-thickness: 4px;
+$split-color: #C3073F;
+$primary-color: #1A1A1D;
+$secondary-color: #C3073F;
+
+%font-settings {
+    font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

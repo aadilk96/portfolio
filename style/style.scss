@@ -1,0 +1,80 @@
+@import "config";
+@import "about";
+@import "home";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+.Mask {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    color: $split-color;
+    top: 0;
+    height: $split-position;
+    transition: all .8s cubic-bezier(.16, 1.08, .38, .98);
+
+    span {
+        display: block;
+    }
+}
+
+.Mask+.Mask {
+    top: $split-position - 0.1;
+    height: 100 - $split-position + 0.1;
+
+    span {
+        transform: translateY(-$split-position);
+    }
+}
+
+main .social-icons {
+    position: fixed;
+    bottom: 1rem;
+    text-decoration: none;
+    left: 1rem;
+}
+
+main .social-icons a {
+    color: #fff;
+    padding: 0.4rem;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+main .social-icons a:hover {
+    color: #C3073F;
+    text-decoration: none;
+}
+
+
+footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: #fff;
+    // &:hover{
+    // }
+}
+
+footer:hover {
+    @include transition-ease;
+    color: $secondary-color;
+}
