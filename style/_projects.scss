@@ -1,8 +1,8 @@
 .projects {
-    height: 100vh;
+    // height: 100vh;
     position: absolute;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     background: linear-gradient(45deg, #02001F, #000000);
 
     &-menu {
@@ -79,15 +79,16 @@
     p {
         color: #fff;
         font-size: 20px;
+        text-align: center;
     }
 
     .date {
-        font-size: 30px;
+        font-size: 25px;
         color: #fff;
     }
 
     h3 {
-        font-size: $font-size;
+        font-size: 40px;
         line-height: 1.2;
         // text-transform: uppercase;
         text-align: center;

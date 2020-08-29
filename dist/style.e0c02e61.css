@@ -164,10 +164,8 @@
 }
 
 .projects {
-  height: 100vh;
   position: absolute;
   width: 100%;
-  overflow: hidden;
   background: linear-gradient(45deg, #02001F, #000000);
 }
 .projects-menu-list {
@@ -230,13 +228,14 @@
 .projects-content p {
   color: #fff;
   font-size: 20px;
+  text-align: center;
 }
 .projects-content .date {
-  font-size: 30px;
+  font-size: 25px;
   color: #fff;
 }
 .projects-content h3 {
-  font-size: 4.25rem;
+  font-size: 40px;
   line-height: 1.2;
   text-align: center;
   display: flex;
