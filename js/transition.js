@@ -12,7 +12,7 @@ class Fade extends highway.Transition {
 
         const tl = new TimelineLite();
         tl.fromTo(to, 0.5, {
-                left: '-100%',
+                right: '-100%',
                 top: '50%'
             }, {
                 left: '0%'

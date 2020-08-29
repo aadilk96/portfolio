@@ -10,6 +10,7 @@
 }
 
 body {
+    
     font-family: "Gilroy ExtraBold", system-ui, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -46,14 +47,17 @@ body {
     }
 }
 
-main .social-icons {
+.social-icons {
     position: fixed;
     bottom: 1rem;
     text-decoration: none;
     left: 1rem;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
 }
 
-main .social-icons a {
+.social-icons a {
     color: #fff;
     padding: 0.4rem;
     text-decoration: none;
@@ -61,7 +65,7 @@ main .social-icons a {
     transition: all 0.5s ease-in-out;
 }
 
-main .social-icons a:hover {
+.social-icons a:hover {
     color: #C3073F;
     text-decoration: none;
 }

@@ -1,13 +1,14 @@
 .about {
   position: absolute;
   width: 100%;
-  background: linear-gradient(45deg, #02001F, #000000);
+  background: linear-gradient(45deg, #04003f, #000000);
 }
 .about-bio {
   text-align: center;
   color: #fff;
 }
 .about-bio .text-secondary {
+  color: #C3073F;
   padding-bottom: 1rem;
 }
 .about .jobs {
@@ -23,7 +24,10 @@
   padding: 0.5rem;
   border-bottom: 5px solid #C3073F;
 }
-.about .jobs-job h2,
+.about .jobs-job h2 {
+  color: #C3073F;
+  margin: 0.5rem 0;
+}
 .about .jobs-job h3 {
   margin: 0.5rem 0;
 }
@@ -87,7 +91,7 @@
   height: 100vh;
   position: absolute;
   width: 100%;
-  background: linear-gradient(45deg, #02001F, #000000);
+  background: linear-gradient(45deg, #04003f, #000000);
 }
 .home-name {
   transform: translateY(50px);
@@ -164,9 +168,11 @@
 }
 
 .projects {
+  height: 100vh;
   position: absolute;
   width: 100%;
-  background: linear-gradient(45deg, #02001F, #000000);
+  overflow: hidden;
+  background: linear-gradient(45deg, #04003f, #000000);
 }
 .projects-menu-list {
   height: 10vh;
@@ -213,37 +219,49 @@
   transform: scale(1);
 }
 
-.projects-content {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.projects-list-item {
+  padding: 20px;
 }
-.projects-content h1 {
+.projects-list-item-title {
   color: #fff;
-  font-size: 50px;
-  margin: 30px 0px;
-  text-align: center;
-}
-.projects-content p {
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-}
-.projects-content .date {
-  font-size: 25px;
-  color: #fff;
-}
-.projects-content h3 {
-  font-size: 40px;
-  line-height: 1.2;
-  text-align: center;
-  display: flex;
-  color: #C3073F;
-  flex-direction: column;
-  align-items: center;
 }
 
+.project-column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+.project-row {
+  margin: 30px 30px;
+}
+
+.project-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.project-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: #C3073F;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .project-column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -273,7 +291,7 @@ body {
 }
 
 .text-secondary {
-  color: #C3073F;
+  color: #04003f;
 }
 
 .Mask + .Mask {
@@ -284,14 +302,17 @@ body {
   transform: translateY(-49%);
 }
 
-main .social-icons {
+.social-icons {
   position: fixed;
   bottom: 1rem;
   text-decoration: none;
   left: 1rem;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
 }
 
-main .social-icons a {
+.social-icons a {
   color: #fff;
   padding: 0.4rem;
   text-decoration: none;
@@ -299,7 +320,7 @@ main .social-icons a {
   transition: all 0.5s ease-in-out;
 }
 
-main .social-icons a:hover {
+.social-icons a:hover {
   color: #C3073F;
   text-decoration: none;
 }

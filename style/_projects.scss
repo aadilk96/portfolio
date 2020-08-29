@@ -1,9 +1,9 @@
 .projects {
-    // height: 100vh;
+    height: 100vh;
     position: absolute;
     width: 100%;
-    // overflow: hidden;
-    background: linear-gradient(45deg, #02001F, #000000);
+    overflow: hidden;
+    background: linear-gradient(45deg, $secondary-color, #000000);
 
     &-menu {
         &-list {
@@ -62,40 +62,48 @@
 }
 
 
-.projects-content {
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-
-    h1 {
-        color: #fff;
-        font-size: 50px;
-        margin: 30px 0px;
-        text-align: center;
+.projects-list {
+    &-item {
+        padding: 20px;
+        &-title {
+            color: #fff;
+        }
     }
+}
 
-    p {
-        color: #fff;
-        font-size: 20px;
-        text-align: center;
-    }
+.project-column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+    line-height: 2em;
+    margin-bottom: 2em;
+}
 
-    .date {
-        font-size: 25px;
-        color: #fff;
-    }
+.project-row {
+    margin: 30px 30px;
+}
 
-    h3 {
-        font-size: 40px;
-        line-height: 1.2;
-        // text-transform: uppercase;
-        text-align: center;
-        display: flex;
-        color: $split-color;
-        flex-direction: column;
-        align-items: center;
-        // transform: rotateX(-15deg) rotateY(19deg);
+.project-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.project-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    border-radius: .5em;
+    background-color: $split-color;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .project-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
     }
 }

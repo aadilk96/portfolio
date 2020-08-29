@@ -2,7 +2,7 @@
     height: 100vh;
     position: absolute;
     width: 100%;
-    background: linear-gradient(45deg, #02001F, #000000);
+    background: linear-gradient(45deg, $secondary-color, #000000);
 
     &-name {
         transform: translateY(50px);
