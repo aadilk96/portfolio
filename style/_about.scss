@@ -22,7 +22,7 @@
         grid-gap: 2rem;
         color: white;
         &-job {
-            background: lighten($primary-color, 10%);
+            background: lighten($primary-color, .010%);
             padding: 0.5rem;
             border-bottom: 5px solid $secondary-color;
 
@@ -43,7 +43,7 @@
         &-list {
             height: 10vh;
             display: flex;
-            width: 50%;
+            width: 30%;
             align-items: center;
             justify-content: space-around;
             margin-left: auto;

@@ -19,7 +19,7 @@
   color: white;
 }
 .about .jobs-job {
-  background: #323238;
+  background: #1a1a1d;
   padding: 0.5rem;
   border-bottom: 5px solid #C3073F;
 }
@@ -34,7 +34,7 @@
 .about-menu-list {
   height: 10vh;
   display: flex;
-  width: 50%;
+  width: 30%;
   align-items: center;
   justify-content: space-around;
   margin-left: auto;
@@ -171,7 +171,7 @@
 .projects-menu-list {
   height: 10vh;
   display: flex;
-  width: 50%;
+  width: 30%;
   align-items: center;
   justify-content: space-around;
   margin-left: auto;
