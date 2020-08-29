@@ -1,9 +1,35 @@
 .about {
-  height: 100vh;
   position: absolute;
   width: 100%;
-  overflow: hidden;
   background: linear-gradient(45deg, #02001F, #000000);
+}
+.about-bio {
+  text-align: center;
+  color: #fff;
+}
+.about-bio .text-secondary {
+  padding-bottom: 1rem;
+}
+.about .jobs {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  color: white;
+}
+.about .jobs-job {
+  background: #323238;
+  padding: 0.5rem;
+  border-bottom: 5px solid #C3073F;
+}
+.about .jobs-job h2,
+.about .jobs-job h3 {
+  margin: 0.5rem 0;
+}
+.about .jobs-job h6 {
+  margin: 0.4rem 0;
+  text-transform: uppercase;
 }
 .about-menu-list {
   height: 10vh;
@@ -49,32 +75,12 @@
 .about-menu-list-item:hover::before, .about-menu-list-item:active::before {
   transform: scale(1);
 }
-
-.about-content {
-  height: 100%;
+.about .social-icons {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.about-content h1 {
-  color: #fff;
-  font-size: 50px;
-  margin: 30px 0px;
-}
-.about-content p {
-  color: #fff;
-  font-size: 20px;
-}
-.about-content h3 {
-  font-size: 4.25rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  text-align: center;
-  display: flex;
-  color: #C3073F;
   flex-direction: column;
-  align-items: center;
-  transform: rotateX(-15deg) rotateY(19deg);
+}
+.about footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
 .home {
@@ -157,6 +163,88 @@
   transform: rotateX(-15deg) rotateY(19deg);
 }
 
+.projects {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(45deg, #02001F, #000000);
+}
+.projects-menu-list {
+  height: 10vh;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: auto;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.projects-menu-list-item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+.projects-menu-list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  right: -10%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: #C3073F;
+  transform: scale(0);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 1;
+}
+.projects-menu-list-item:hover .Mask, .projects-menu-list-item:active .Mask {
+  color: #FFF;
+  transform: skewX(12deg) translateX(5px);
+}
+.projects-menu-list-item:hover .Mask + .Mask, .projects-menu-list-item:active .Mask + .Mask {
+  transform: skewX(12deg) translateX(-5px);
+}
+.projects-menu-list-item:hover::before, .projects-menu-list-item:active::before {
+  transform: scale(1);
+}
+
+.projects-content {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.projects-content h1 {
+  color: #fff;
+  font-size: 50px;
+  margin: 30px 0px;
+  text-align: center;
+}
+.projects-content p {
+  color: #fff;
+  font-size: 20px;
+}
+.projects-content .date {
+  font-size: 30px;
+  color: #fff;
+}
+.projects-content h3 {
+  font-size: 4.25rem;
+  line-height: 1.2;
+  text-align: center;
+  display: flex;
+  color: #C3073F;
+  flex-direction: column;
+  align-items: center;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -183,6 +271,10 @@ body {
 }
 .Mask span {
   display: block;
+}
+
+.text-secondary {
+  color: #C3073F;
 }
 
 .Mask + .Mask {
@@ -221,11 +313,6 @@ footer {
   text-align: right;
   padding: 1rem;
   color: #fff;
-}
-
-footer:hover {
-  transition: all 0.5s ease-in-out;
-  color: #C3073F;
 }
 
 /*# sourceMappingURL=/style.e0c02e61.css.map */

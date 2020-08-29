@@ -1,6 +1,7 @@
 @import "config";
 @import "about";
 @import "home";
+@import "projects";
 
 * {
     margin: 0px;
@@ -30,6 +31,10 @@ body {
     span {
         display: block;
     }
+}
+
+.text-secondary {
+    color: $secondary-color;
 }
 
 .Mask+.Mask {
@@ -74,7 +79,7 @@ footer {
     // }
 }
 
-footer:hover {
-    @include transition-ease;
-    color: $secondary-color;
-}
+// footer:hover {
+//     @include transition-ease;
+//     color: $secondary-color;
+// }

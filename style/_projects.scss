@@ -1,43 +1,9 @@
-.about {
-    // height: 100vh;
+.projects {
+    height: 100vh;
     position: absolute;
     width: 100%;
-    // overflow: hidden;
+    overflow: hidden;
     background: linear-gradient(45deg, #02001F, #000000);
-
-    &-bio {
-        // width: 80%;
-        text-align: center;
-        color: #fff;
-        .text-secondary {
-            padding-bottom: 1rem;
-        }
-    }
-
-    .jobs {
-        width: 60vw;
-        margin: 2rem auto 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        color: white;
-        &-job {
-            background: lighten($primary-color, 10%);
-            padding: 0.5rem;
-            border-bottom: 5px solid $secondary-color;
-
-            h2,
-            h3 {
-                margin: 0.5rem 0;
-            }
-
-            h6 {
-                margin: 0.4rem 0;
-                // color: $secondary-color;
-                text-transform: uppercase;
-            }
-        }
-    }
 
     &-menu {
         &-list {
@@ -93,45 +59,42 @@
             }
         }
     }
-
-    .social-icons {
-        display: flex;
-        flex-direction: column;
-    }
-
-    footer {
-        transform: rotate(90deg) translate(-3rem, -5rem);
-    }
 }
 
 
-// .about-content {
-//     height: 100%;
-//     display: flex;
-//     justify-content: space-evenly;
-//     align-items: center;
+.projects-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
 
-//     h1 {
-//         color: #fff;
-//         font-size: 50px;
-//         margin: 30px 0px;
-//     }
+    h1 {
+        color: #fff;
+        font-size: 50px;
+        margin: 30px 0px;
+        text-align: center;
+    }
 
-//     p {
-//         color: #fff;
-//         font-size: 20px;
-//     }
+    p {
+        color: #fff;
+        font-size: 20px;
+    }
 
-//     h3 {
-//         font-size: $font-size;
-//         line-height: 1.2;
-//         text-transform: uppercase;
-//         text-align: center;
-//         display: flex;
-//         color: $split-color;
-//         flex-direction: column;
-//         align-items: center;
-//         transform: rotateX(-15deg) rotateY(19deg);
-//     }
-// }
+    .date {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    h3 {
+        font-size: $font-size;
+        line-height: 1.2;
+        // text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        color: $split-color;
+        flex-direction: column;
+        align-items: center;
+        // transform: rotateX(-15deg) rotateY(19deg);
+    }
+}
